@@ -1,4 +1,8 @@
-<?php include 'auth.php'; ?>
+<?php
+require_once dirname(__FILE__) . '/auth.php';
+require_once dirname(__FILE__) . '/controller/PersonController.php';
+require_once dirname(__FILE__) . '/model/Person.php';
+?>
 
 <!DOCTYPE html>
 <html>
@@ -7,9 +11,6 @@
     </head>
     <body>
         <?php
-        require_once 'controller/PersonController.php';
-        require_once 'model/Person.php';
-
         $person = new \model\Person(NULL, NULL);
 
         $new = 1;

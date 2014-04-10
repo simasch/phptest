@@ -2,7 +2,8 @@
 
 namespace dao;
 
-require_once __ROOT__ . '/config/Config.php';
+require_once dirname(__FILE__) . '/../config/Config.php';
+require_once dirname(__FILE__) . '/../model/Person.php';
 
 class PersonDao {
 

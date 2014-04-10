@@ -2,12 +2,9 @@
 
 namespace controller;
 
-define('__ROOT__', dirname(dirname(__FILE__)));
-
-include __ROOT__ . '/auth.php';
-
-require_once __ROOT__ . '/dao/PersonDao.php';
-require_once __ROOT__ . '/model/Person.php';
+require_once dirname(__FILE__) . '/../controller/PersonController.php';
+require_once dirname(__FILE__) . '/../dao/PersonDao.php';
+require_once dirname(__FILE__) . '/../model/Person.php';
 
 if (isset($_GET['function'])) {
     $host = $_SERVER['HTTP_HOST'];

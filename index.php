@@ -1,4 +1,8 @@
-<?php include 'auth.php'; ?>
+<?php
+require_once dirname(__FILE__) . '/auth.php';
+require_once dirname(__FILE__) . '/controller/PersonController.php';
+require_once dirname(__FILE__) . '/model/Person.php';
+?>
 
 <!DOCTYPE html>
 <html>
@@ -6,10 +10,6 @@
         <title>People</title>
     </head>
     <body>
-        <?php
-        require_once 'controller/PersonController.php';
-        require_once 'model/Person.php';
-        ?>
 
         <table>
             <?php
