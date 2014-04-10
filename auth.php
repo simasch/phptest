@@ -7,7 +7,7 @@ if (!isset($_SESSION)) {
 $hostname = $_SERVER['HTTP_HOST'];
 $path = dirname($_SERVER['PHP_SELF']);
 
-if (!isset($_SESSION['angemeldet']) || !$_SESSION['angemeldet']) {
+if (!isset($_SESSION['username']) || !$_SESSION['username']) {
     header('Location: http://' . $hostname . ($path == '/' ? '' : $path) . '/login.php');
     exit;
 }
