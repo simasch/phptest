@@ -44,8 +44,8 @@ class PersonDao {
     }
 
     public function insertPerson(\model\Person $person) {
-        $stmt = $this->con->prepare("INSERT INTO person (id, name) VALUES (?, ?)");
-        $stmt->bind_param("is", $person->getId(), $person->getName());
+        $stmt = $this->con->prepare("INSERT INTO person (name) VALUES (?)");
+        $stmt->bind_param("s", $person->getName());
 
         $stmt->execute();
         $stmt->close();

@@ -26,7 +26,7 @@ require_once dirname(__FILE__) . '/model/Person.php';
             <table>
                 <tr>
                     <td>
-                        <input name="id" type="text" value="<?php echo $person->getId(); ?>" />
+                        <input name="id" type="text" readonly value="<?php echo $person->getId(); ?>" />
                     </td>
                     <td>
                         <input name="name" type="text" value="<?php echo $person->getName(); ?>" />
