@@ -45,15 +45,17 @@ class PersonDao {
     public function insertPerson(\model\Person $person) {
         $stmt = $this->con->prepare("INSERT INTO person (name) VALUES (?)");
         $stmt->bind_param("s", $person->getName());
-
         $stmt->execute();
+        $id = $this->con->insert_id;
         $stmt->close();
+        
+        $person->setId($id);
+        return $person;
     }
 
     public function updatePerson(\model\Person $person) {
         $stmt = $this->con->prepare("UPDATE person SET name = ? WHERE id = ?");
         $stmt->bind_param("si", $person->getName(), $person->getId());
-
         $stmt->execute();
         $stmt->close();
     }
