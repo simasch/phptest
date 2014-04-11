@@ -1,6 +1,8 @@
 <?php
 require_once dirname(__FILE__) . '/util/auth.php';
 require_once dirname(__FILE__) . '/util/import.php';
+
+$personController = new controller\PersonController();
 ?>
 
 <!DOCTYPE html>
@@ -10,9 +12,10 @@ require_once dirname(__FILE__) . '/util/import.php';
     </head>
     <body>
 
+        <h1>People</h1>
+
         <table>
             <?php
-            $personController = new controller\PersonController();
             foreach ($personController->listPeople() as $key => $person) {
                 ?>
                 <tr>

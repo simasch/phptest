@@ -11,16 +11,16 @@ if (isset($_GET['function'])) {
     $function = $_GET['function'];
 
     if ($function == 'addPerson') {
-        $page = '../edit.php';
+        $page = 'edit.php';
     } else if ($function == 'editPerson') {
-        $page = '../edit.php?id=' . $_GET['id'];
+        $page = 'edit.php?id=' . $_GET['id'];
     } else if ($function == 'savePerson') {
         $personController = new \controller\PersonController();
         $personController->savePerson();
-        $page = '../index.php';
+        $page = 'index.php';
     }
 
-    header("Location: http://$host$uri/$page");
+    header("Location: http://$host$uri/../$page");
     exit;
 }
 
