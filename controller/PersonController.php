@@ -2,9 +2,7 @@
 
 namespace controller;
 
-require_once dirname(__FILE__) . '/../controller/PersonController.php';
-require_once dirname(__FILE__) . '/../dao/PersonDao.php';
-require_once dirname(__FILE__) . '/../model/Person.php';
+require_once dirname(__FILE__) . '/../util/import.php';
 
 if (isset($_GET['function'])) {
     $host = $_SERVER['HTTP_HOST'];

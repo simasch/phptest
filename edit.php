@@ -1,7 +1,6 @@
 <?php
-require_once dirname(__FILE__) . '/auth.php';
-require_once dirname(__FILE__) . '/controller/PersonController.php';
-require_once dirname(__FILE__) . '/model/Person.php';
+require_once dirname(__FILE__) . '/util/auth.php';
+require_once dirname(__FILE__) . '/util/import.php';
 ?>
 
 <!DOCTYPE html>

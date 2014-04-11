@@ -1,5 +1,5 @@
 <?php
-require_once dirname(__FILE__) . '/dao/UserDao.php';
+require_once dirname(__FILE__) . '/util/import.php';
 
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     session_start();

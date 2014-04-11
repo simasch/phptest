@@ -2,7 +2,7 @@
 
 namespace dao;
 
-require_once dirname(__FILE__) . '/../config/Config.php';
+require_once dirname(__FILE__) . '/../util/import.php';
 
 class UserDao {
 
