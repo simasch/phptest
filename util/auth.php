@@ -1,8 +1,6 @@
 <?php
 
-if (!isset($_SESSION)) {
-    session_start();
-}
+session_start();
 
 $hostname = $_SERVER['HTTP_HOST'];
 $path = dirname($_SERVER['PHP_SELF']);

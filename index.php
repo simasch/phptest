@@ -6,7 +6,7 @@ require_once dirname(__FILE__) . '/util/import.php';
 <!DOCTYPE html>
 <html>
     <head>
-        <title>People</title>
+        <title>People (User: <?php echo $_SESSION['username'] ?>)</title>
     </head>
     <body>
 

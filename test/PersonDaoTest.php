@@ -29,7 +29,6 @@ class PersonDaoTest extends \PHPUnit_Framework_TestCase {
 
     public function testInsertPerson() {
         $person = new \model\Person(NULL, "Test");
-        
         $person = self::$personDao->insertPerson($person);
         
         $this->assertNotNull($person->getId());
